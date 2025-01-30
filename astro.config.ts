@@ -35,6 +35,7 @@ export default defineConfig({
         "tabler": ['*'],
         "solar": ["smart-vacuum-cleaner-2-bold-duotone"],
         "fluent-emoji-flat": [
+          "automobile",
           "snowflake",           
           "fountain",
           "electric-plug"
@@ -44,8 +45,11 @@ export default defineConfig({
           "car"
         ],
         'flat-color-icons': [
+          'customer-support',
+          'support',
+          'about',
           'iphone',
-          "idea",
+          'idea',
           'webcam',
           'water-heater',
           'template',
