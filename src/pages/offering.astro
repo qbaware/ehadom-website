@@ -1,0 +1,202 @@
+---
+import Brands from '~/components/widgets/Brands.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Offerings',
+};
+---
+
+<Layout metadata={metadata}>
+  <Features2
+    id="devices"
+    title="Most used gadgets"
+    subtitle="Some of the most popular smart home devices and functionalities."
+    tagline="Devices"
+    items={[
+      {
+        title: 'Mobile Application',
+        description:
+          'Operate your whole home via a mobile app. Turn lights on/off, adjust thermostats, and even check security cameras - all from the palm of your hand. Anywhere, anytime.',
+        icon: 'flat-color-icons:iphone',
+      },
+      {
+        title: 'Lights',
+        description:
+          "Have lights automatically turn on and off based on time, motion, or even your mood. It's like magic, but real!",
+        icon: 'flat-color-icons:idea',
+      },
+      {
+        title: 'Cameras',
+        description:
+          "Keep an eye on your home, even when you're not there. With smart cameras, you can see what's happening in real-time and even get alerts when something's up.",
+        icon: 'flat-color-icons:webcam',
+      },
+      {
+        title: 'Climate control',
+        description:
+          'Set the perfect temperature for your home, no matter the season. With smart ACs and automations, you can save energy and stay comfortable all year round.',
+        icon: 'fluent-emoji-flat:snowflake',
+      },
+      {
+        title: 'Vacuum cleaners',
+        description:
+          "Clean your home without lifting a finger. Smart vacuums can navigate your home, avoid obstacles, and even empty themselves. It's like having a personal cleaning assistant! This can be done via voice, app, or a schedule automation.",
+        icon: 'solar:smart-vacuum-cleaner-2-bold-duotone',
+      },
+      {
+        title: 'Pet feeders and fountains',
+        description:
+          "Make sure your pet is fed and hydrated, even when you're not home. With smart feeders and fountains, you can keep your furry friend happy and healthy.",
+        icon: 'fluent-emoji-flat:fountain',
+      },
+      {
+        title: 'TVs',
+        description:
+          'Some TVs are smart. Thus, they can be operated via voice commands, mobile apps, and can be part of fancy automations.',
+        icon: 'icon-park:tv-one',
+      },
+      {
+        title: 'Garage doors',
+        description:
+          "Monitor your garage doors and open or close them remotely. You can also set up automations to open or close them based on your location, or time of day, or time that they've been opened.",
+        icon: 'fluent-emoji-flat:automobile',
+      },
+      {
+        title: 'Smart plugs',
+        description:
+          'Smart plugs allow users to track their electricity usage, turn devices on and off remotely (via app or voice), and even set schedules for when devices should be on or off.',
+        icon: 'fluent-emoji-flat:electric-plug',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <Features2
+    id="services"
+    title="What we offer"
+    tagline="Services"
+    subtitle="We offer a range of services that can help you have a successful smart home system - regardless whether it's installed from us or not."
+    items={[
+      {
+        title: 'Smart Home Installation',
+        description:
+          'After we know your exact needs, we can create, install, and integrate all devices into your perfect smart home system.',
+        icon: 'flat-color-icons:support',
+      },
+      {
+        title: 'Smart Home Technical Support',
+        description:
+          'To users that have subscribed to a support plan, we offer help with any issues they may encounter while using our smart home systems.',
+        icon: 'flat-color-icons:customer-support',
+      },
+      {
+        title: 'Smart Home Consultation',
+        description: 'We can offer help and advice to all people that struggle with their smart home system.',
+        icon: 'flat-color-icons:about',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- <Brands
+    id="brands"
+    title="Manufacturers we work with"
+    tagline="Brands"
+    subtitle="At Ehadom, we believe that reliability and quality are the most important things when it comes to smart home devices."
+    icons={[]}
+    images={[
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'Paypal',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/48/visa-6850402_1280.png',
+        alt: 'Visa',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png',
+        alt: 'Ebay',
+      },
+
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
+        alt: 'Youtube',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
+        alt: 'Microsoft',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
+        alt: 'Node JS',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
+        alt: 'Google',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
+        alt: 'Meta',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png',
+        alt: 'Yahoo',
+      },
+    ]}
+  /> -->
+
+  <Steps
+    id="steps"
+    title="How working together looks like"
+    tagline="Work process"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Connect and discuss your needs</span>',
+        description:
+          "We discuss via email or a call what your needs are and what you're looking for in a smart home system. We also make suggestions based on our experience.",
+        icon: 'tabler:armchair-2',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Prepare a tailored offer</span>',
+        description:
+          "After we're aware of what your needs are, we prepare you an offer that would meet your requirements and expectations as much as possible.",
+        icon: 'tabler:note',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Execution</span>',
+        description: 'We setup and integrate all chosen devices into a single smart home system for your home.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Done!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1608303588026-884930af2559?q=80&w=3403&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DD&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <CallToAction
+    title="What's next?"
+    subtitle="Learn more about us and why we're the best choice for your smart home system."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'About us',
+        href: '/company',
+      },
+    ]}
+  />
+</Layout>

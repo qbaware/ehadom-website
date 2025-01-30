@@ -1,15 +1,10 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Brands from '~/components/widgets/Brands.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 ---
 
 <Layout
@@ -18,8 +13,6 @@ import Brands from '~/components/widgets/Brands.astro';
     ignoreTitleTemplate: true,
   }}
 >
-  <!-- Hero Widget ******************* -->
-
   <Hero image={{ src: '~/assets/images/hero-2.jpg', alt: 'AstroWind Hero Image' }}>
     <Fragment slot="title">
       Your home. <span class="xl:inline">Smart.</span> With
@@ -32,8 +25,6 @@ import Brands from '~/components/widgets/Brands.astro';
       >
     </Fragment>
   </Hero>
-
-  <!-- Features Widget *************** -->
 
   <Features
     id="benefits"
@@ -80,8 +71,6 @@ import Brands from '~/components/widgets/Brands.astro';
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
   <Content
     id="usecases"
     isReversed
@@ -121,8 +110,6 @@ import Brands from '~/components/widgets/Brands.astro';
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
   <Content
     isAfterContent
     items={[
@@ -157,8 +144,6 @@ import Brands from '~/components/widgets/Brands.astro';
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
 
   <Content
     isReversed
@@ -198,8 +183,6 @@ import Brands from '~/components/widgets/Brands.astro';
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
   <Content
     isAfterContent
     items={[
@@ -233,8 +216,6 @@ import Brands from '~/components/widgets/Brands.astro';
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
 
   <Content
     isReversed
@@ -271,393 +252,27 @@ import Brands from '~/components/widgets/Brands.astro';
     </Fragment>
   </Content>
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    id="devices"
-    title="Most used gadgets"
-    subtitle="Some of the most popular smart home devices and functionalities."
-    tagline="Devices"
-    items={[
-      {
-        title: 'Mobile Application',
-        description:
-          'Operate your whole home via a mobile app. Turn lights on/off, adjust thermostats, and even check security cameras - all from the palm of your hand. Anywhere, anytime.',
-        icon: 'flat-color-icons:iphone',
-      },
-      {
-        title: 'Lights',
-        description:
-          "Have lights automatically turn on and off based on time, motion, or even your mood. It's like magic, but real!",
-        icon: 'flat-color-icons:idea',
-      },
-      {
-        title: 'Cameras',
-        description:
-          "Keep an eye on your home, even when you're not there. With smart cameras, you can see what's happening in real-time and even get alerts when something's up.",
-        icon: 'flat-color-icons:webcam',
-      },
-      {
-        title: 'Climate control',
-        description:
-          'Set the perfect temperature for your home, no matter the season. With smart ACs and automations, you can save energy and stay comfortable all year round.',
-        icon: 'fluent-emoji-flat:snowflake',
-      },
-      {
-        title: 'Vacuum cleaners',
-        description:
-          "Clean your home without lifting a finger. Smart vacuums can navigate your home, avoid obstacles, and even empty themselves. It's like having a personal cleaning assistant! This can be done via voice, app, or a schedule automation.",
-        icon: 'solar:smart-vacuum-cleaner-2-bold-duotone',
-      },
-      {
-        title: 'Pet feeders and fountains',
-        description:
-          "Make sure your pet is fed and hydrated, even when you're not home. With smart feeders and fountains, you can keep your furry friend happy and healthy.",
-        icon: 'fluent-emoji-flat:fountain',
-      },
-      {
-        title: 'TVs',
-        description:
-          'Some TVs are smart. Thus, they can be operated via voice commands, mobile apps, and can be part of fancy automations.',
-        icon: 'icon-park:tv-one',
-      },
-      {
-        title: 'Garage doors',
-        description:
-          "Monitor your garage doors and open or close them remotely. You can also set up automations to open or close them based on your location, or time of day, or time that they've been opened.",
-        icon: 'fluent-emoji-flat:automobile',
-      },
-      {
-        title: 'Smart plugs',
-        description:
-          'Smart plugs allow users to track their electricity usage, turn devices on and off remotely (via app or voice), and even set schedules for when devices should be on or off.',
-        icon: 'fluent-emoji-flat:electric-plug',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <!-- <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  /> -->
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    id="services"
-    title="What we offer"
-    tagline="Services"
-    subtitle="We offer a range of services that can help you have a successful smart home system - regardless whether it's installed from us or not."
-    items={[
-      {
-        title: 'Smart Home Installation',
-        description:
-          'After we know your exact needs, we can create, install, and integrate all devices into your perfect smart home system.',
-        icon: 'flat-color-icons:support',
-      },
-      {
-        title: 'Smart Home Technical Support',
-        description:
-          'To users that have subscribed to a support plan, we offer help with any issues they may encounter while using our smart home systems.',
-        icon: 'flat-color-icons:customer-support',
-      },
-      {
-        title: 'Smart Home Consultation',
-        description: 'We can offer help and advice to all people that struggle with their smart home system.',
-        icon: 'flat-color-icons:about',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Brands Widget ************** -->
-
-  <!-- <Brands
-    id="brands"
-    title="Partnerships & Collaborations"
-    tagline="Brands"
-    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
-    icons={[]}
-    images={[
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Paypal',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/48/visa-6850402_1280.png',
-        alt: 'Visa',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png',
-        alt: 'Ebay',
-      },
-
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
-        alt: 'Youtube',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
-        alt: 'Microsoft',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
-        alt: 'Node JS',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
-        alt: 'Google',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
-        alt: 'Meta',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png',
-        alt: 'Yahoo',
-      },
-    ]}
-  /> -->
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    id="steps"
-    title="How working together looks like"
-    tagline="Steps"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Connect and discuss your needs</span>',
-        description:
-          "We discuss via email or a call what your needs are and what you're looking for in a smart home system. We also make suggestions based on our experience.",
-        icon: 'tabler:armchair-2',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Prepare a tailored offer</span>',
-        description:
-          "After we're aware of what your needs are, we prepare you an offer that would meet your requirements and expectations as much as possible.",
-        icon: 'tabler:note',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Execution</span>',
-        description: 'We setup and integrate all chosen devices into a single smart home system for your home.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Done!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1608303588026-884930af2559?q=80&w=3403&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DD&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <Content
-    id="about"
-    title="Who we are"
-    tagline="About"
-    columns={3}
-    items={[
-      {
-        icon: 'tabler:world-www',
-        callToAction: {
-          target: '_blank',
-          text: 'Website',
-          href: 'https://danielgospodinow.com',
-        },
-      },
-      {
-        icon: 'tabler:brand-linkedin',
-        callToAction: {
-          target: '_blank',
-          text: 'LinkedIn',
-          href: 'https://linkedin.com/in/danielgospodinow',
-        },
-      },
-      {
-        icon: 'tabler:brand-github',
-        callToAction: {
-          target: '_blank',
-          text: 'GitHub',
-          href: 'https://github.com/danielgospodinow',
-        },
-      },
-    ]}
-    image={{
-      src: 'https://i.imgur.com/y76nEbO.jpeg',
-      alt: 'Colorful Image',
-      loading: 'eager',
-    }}
-  >
-    <Fragment slot="content">
-      <p>
-        So far, Ehadom's team is composed of two people. Me - Daniel and my father - Veselin. I'm more focused on the
-        tech part while my father is responsible for the installations.
-      </p>
-      <br />
-      <p>
-        More about me - I'm a software engineer with a passion for smart home systems and automation. I have experience
-        building distributed applications in a Silicon Valley company as well as building large-scale enterprise
-        applications.
-      </p>
-      <br />
-      <p>
-        I aspire to build smart homes and the potential to transform everyday living with cutting-edge technology is
-        what drives me.
-      </p>
-      <br />
-      <p>If you're curious to dive deeper into my work, you can check my:</p>
-    </Fragment>
-  </Content>
-
-  <!-- Testimonials Widget *********** -->
-
-  <Testimonials
-    id="testimonials"
-    title="What our users say?"
-    tagline="Testimonials"
-    testimonials={[
-      {
-        testimonial:
-          'Ehadom transformed my home into a smart haven. The installation was seamless, and the support team was incredibly helpful. Now, I can control everything from my phone!',
-        name: 'Hakan Halil',
-        job: 'Software Engineer @ Broadcom',
-        image: {
-          src: '~/assets/images/testi2.jpg',
-          alt: 'Hakan Halil Image',
-        },
-      },
-      {
-        testimonial:
-          'The smart home system installed by Ehadom has made my life so much easier. From automated lighting to security systems, everything works flawlessly. Highly recommend their services!',
-        name: 'Georgi Angelov',
-        job: 'Business owner @ Metacar.bg',
-        image: {
-          src: '~/assets/images/testi5.jpg',
-          alt: 'Josh Wilkinson Image',
-        },
-      },
-      {
-        testimonial:
-          'I was impressed with the professionalism and expertise of the Ehadom team. They provided excellent support and ensured that all my smart home devices were set up perfectly.',
-        name: 'Alexander Tonev',
-        job: 'Software Developer @ Bosch',
-        image: {
-          src: '~/assets/images/testi4.jpg',
-          alt: 'Sidney Hansen Image',
-        },
-      },
-      {
-        testimonial:
-          'Thanks to Ehadom, my home is now smarter and more efficient. The installation process was quick, and the team was very knowledgeable. I love the convenience of controlling everything remotely.',
-        name: 'Miroslav Grozdanov',
-        job: 'Software Technical Support Lead @ Shelly',
-        image: {
-          src: '~/assets/images/testi1.jpg',
-          alt: 'Miroslav Grozdanov Image',
-        },
-      },
-      {
-        testimonial:
-          'Ehadom provided exceptional service from start to finish. They helped me choose the right smart home devices and installed them with great care. The support team is always available to assist with any issues.',
-        name: 'Kristian Ivanov',
-        job: 'Personal Security @ G4S',
-        image: {
-          src: '~/assets/images/testi3.jpg',
-          alt: 'Kristian Ivanov Image',
-        },
-      },
-      {
-        testimonial:
-          "I couldn't be happier with the smart home installation by Ehadom. The team was professional, efficient, and provided excellent support. My home is now more secure and energy-efficient.",
-        name: 'Milen Georgiev',
-        job: 'Software Developer @ Progress',
-        image: {
-          src: '~/assets/images/testi6.jpg',
-          alt: 'Sidney Hansen Image',
-        },
-      },
+  <Stats
+    id="statistics"
+    title="Here's why you probably want a smart home system"
+    subtitle="The numbers below are from different surveys from Statista, SafeWise, Energy Star, Coldwell Banker, and others."
+    tagline="Statistics"
+    stats={[
+      { title: 'of smart home owners would recommend smart home systems', amount: '92%' },
+      { title: 'of smart home owners feel more safe and secure using a smart home system', amount: '89%' },
+      { title: 'property value increase if it has a smart home system', amount: '5-10%' },
+      { title: 'of average monthly energy savings', amount: '15-20%' },
     ]}
   />
 
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    id="faqs"
-    title="Frequently Asked Questions"
-    subtitle="Here are some common questions that you might have about our services."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
+  <CallToAction
+    title="What's next?"
+    subtitle="Learn more about what we offer and join our community of satisfied customers who have transformed their homes with our services."
+    actions={[
       {
-        title: 'What details exactly do I need to provide to receive a smart home project offer?',
-        description:
-          'We need to know the size of your home, the number of rooms, the number of floors, the number of people living in the home, the devices you already have, the devices you want to have, and the budget you have in mind - just to name a few.',
-      },
-      {
-        title: 'But what happens if something stops working at home?',
-        description:
-          "Given that you are eligible to receive support from us, we'll do our best to help you resolve the issue in a timely manner (usually 3-4 business days). If it's a hardware issue, we can replace the device. If it's a software issue, we'll help you resolve it.",
-      },
-      {
-        title: 'Can we have additional devices in the smart home system in the future?',
-        description:
-          "Yes. It's totally possible to add more devices to your smart home system. However, it's recommended to consult with us before adding a new device to ensure that it's compatible with your existing system. Also, we'll help out with the installation.",
-      },
-      {
-        title: 'What kind of smart home systems do you install actually?',
-        description:
-          'We install Home Assistant systems. And we have a couple of hardware options that we choose based on customer needs, but to name some - Raspberry Pi 4/5, Home Assistant Green, mini PC, or some other custom-built server.',
-      },
-      {
-        title: 'What kind of voice assistants do you support/offer?',
-        description:
-          "We offer only two choices as of now - an integration with Amazon Alexa (for a cloud-based voice assistant) or an integration with Rhasspy (for a local voice assistant). We're planning to add more in the future.",
-      },
-      {
-        title: 'Is the system local or cloud-based?',
-        description:
-          "Based on the specific needs of the customer, we can offer both. However, we always recommend a local system as it's more secure and reliable. But if you need to control your home while you're not at home, a cloud-based system is the way to go.",
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    id="contact"
-    title="Reach out"
-    tagline="Contact"
-    subtitle="Have questions? Feel free to contact us. We're here to help!"
-    items={[
-      {
-        title: 'Discord',
-        description: "DM danielgospodinow or join Qbaware's server (discord.gg/4sRmgb9Vph)",
-        icon: 'tabler:brand-discord',
-      },
-      {
-        title: 'Email',
-        description: 'danielgospodinow@yahoo.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Call / Viber / WhatsApp',
-        description: '+359 899 859 592',
-        icon: 'tabler:phone',
+        variant: 'primary',
+        text: 'Our offerings',
+        href: '/offering',
       },
     ]}
   />

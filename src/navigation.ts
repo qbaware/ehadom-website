@@ -13,22 +13,31 @@ export const headerData = {
           text: 'Use cases',
           href: getPermalink('/#usecases'),
         },
+        {
+          text: 'Statistics',
+          href: getPermalink('/#statistics'),
+        },
       ],
     },
     {
-      text: 'Products',
+      text: 'Offerings',
+      href: getPermalink('/offering'),
       links: [
         {
           text: 'Devices',
-          href: getPermalink('/#devices'),
+          href: getPermalink('/offering#devices'),
         },
         {
           text: 'Services',
-          href: getPermalink('/#services'),
+          href: getPermalink('/offering#services'),
         },
         {
           text: 'Brands',
-          href: getPermalink('/#brands'),
+          href: getPermalink('/offering#brands'),
+        },
+        {
+          text: 'Steps',
+          href: getPermalink('/offering#steps'),
         },
       ],
     },
@@ -36,29 +45,25 @@ export const headerData = {
       text: 'Company',
       links: [
         {
-          text: 'Steps',
-          href: getPermalink('/#steps'),
+          text: 'About us',
+          href: getPermalink('/company#about'),
         },
         {
           text: 'Testimonials',
-          href: getPermalink('/#testimonials'),
-        },
-        {
-          text: 'About',
-          href: getPermalink('/#about'),
-        },
-        {
-          text: 'FAQs',
-          href: getPermalink('/#faqs'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/#contact'),
+          href: getPermalink('/company#testimonials'),
         },
       ],
     },
+    {
+      text: 'FAQs',
+      href: getPermalink('/faq'),
+    },
+    {
+      text: 'Contacts',
+      href: getPermalink('/contact'),
+    },
   ],
-  actions: [{ text: 'Contact Us', href: getPermalink('/#contact'), target: '_blank' }],
+  actions: [{ text: 'Contact us', href: getPermalink('/#contact'), target: '_blank' }],
 };
 
 export const footerData = {

@@ -1,0 +1,63 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Pricing',
+};
+---
+
+<Layout metadata={metadata}>
+  <FAQs
+    id="faqs"
+    title="Frequently Asked Questions"
+    subtitle="Here are some common questions that you might have about our services."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What details exactly do I need to provide to receive a smart home project offer?',
+        description:
+          'We need to know the size of your home, the number of rooms, the number of floors, the number of people living in the home, the devices you already have, the devices you want to have, and the budget you have in mind - just to name a few.',
+      },
+      {
+        title: 'But what happens if something stops working at home?',
+        description:
+          "Given that you are eligible to receive support from us, we'll do our best to help you resolve the issue in a timely manner (usually 3-4 business days). If it's a hardware issue, we can replace the device. If it's a software issue, we'll help you resolve it.",
+      },
+      {
+        title: 'Can we have additional devices in the smart home system in the future?',
+        description:
+          "Yes. It's totally possible to add more devices to your smart home system. However, it's recommended to consult with us before adding a new device to ensure that it's compatible with your existing system. Also, we'll help out with the installation.",
+      },
+      {
+        title: 'What kind of smart home systems do you install actually?',
+        description:
+          'We install Home Assistant systems. And we have a couple of hardware options that we choose based on customer needs, but to name some - Raspberry Pi 4/5, Home Assistant Green, mini PC, or some other custom-built server.',
+      },
+      {
+        title: 'What kind of voice assistants do you support/offer?',
+        description:
+          "We offer only two choices as of now - an integration with Amazon Alexa (for a cloud-based voice assistant) or an integration with Rhasspy (for a local voice assistant). We're planning to add more in the future.",
+      },
+      {
+        title: 'Is the system local or cloud-based?',
+        description:
+          "Based on the specific needs of the customer, we can offer both. However, we always recommend a local system as it's more secure and reliable. But if you need to control your home while you're not at home, a cloud-based system is the way to go.",
+      },
+    ]}
+  />
+
+  <CallToAction
+    title="What's next?"
+    subtitle="Didn't find what you were looking for? Feel free to reach out to us directly. We'll be glad to help!"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact us',
+        href: '/contact',
+      },
+    ]}
+  />
+</Layout>
