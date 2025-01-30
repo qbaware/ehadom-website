@@ -2,92 +2,72 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
-const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
-  ignoreTitleTemplate: true,
-};
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Brands from '~/components/widgets/Brands.astro';
 ---
 
-<Layout metadata={metadata}>
+<Layout
+  metadata={{
+    title: 'Ehadom — Smart Home providers and consultants',
+    ignoreTitleTemplate: true,
+  }}
+>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
-  >
+  <Hero image={{ src: '~/assets/images/hero-2.jpg', alt: 'AstroWind Hero Image' }}>
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 5.0</span> + Tailwind CSS
+      Your home. <span class="hidden xl:inline">Smart.</span> With
+      <span class="text-accent dark:text-white highlight"> Ehadom</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
+        At <span class="font-semibold">Ehadom</span>, we provide people with home automation and offer smart home
+        consulting.</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
     </Fragment>
   </Hero>
-
-  <!-- Note Widget ******************* -->
-
-  <Note />
 
   <!-- Features Widget *************** -->
 
   <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+    id="benefits"
+    tagline="Benefits"
+    title="What you get with Ehadom"
+    subtitle="We provide one of the most professional and comprehensive smart home experiences."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Gadgets that ease your life',
         description:
           'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Smart and seamless automations that save time, effort, and money',
         description:
           'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
         icon: 'tabler:components',
       },
       {
-        title: 'Best Practices',
+        title: 'Voice control for efortless interaction with your home',
         description:
           'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
         icon: 'tabler:list-check',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Energy usage monitoring and optimization',
         description:
           'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Reduced environmental footprint',
         description:
           "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
         icon: 'tabler:arrows-right-left',
@@ -104,17 +84,18 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
+    id="usecases"
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Use cases"
+    title="What you can have at home"
     items={[
       {
-        title: 'Built on top of Astro 5.0',
+        title: "Soft-disable ACs when there's no one at home and enable them back when someone arrives",
         description:
           'Benefiting from the performance and developer-friendly features of this modern static site generator.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Soft-disable living room AC at night and enable it back in the morning',
         description:
           'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
       },
@@ -130,8 +111,8 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Intelligent AC operation</h3>
+      Optimize usage and save money by using the ACs only when it's necessary.
     </Fragment>
 
     <Fragment slot="bg">
@@ -169,7 +150,12 @@ const metadata = {
       alt: 'Blueprint Image',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Intelligent water heater operation
+      </h3>
+      Optimize usage and save money by using the ACs only when it's necessary.
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -183,9 +169,9 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Enhanced user engagement',
+        title: 'Single place to control all',
         description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+          'You can control all your smart home devices from a single place, no matter if you are at home or not. This includes TVs, ACs, lights, cameras, everything.',
       },
       {
         title: 'Continuous improvement',
@@ -197,113 +183,85 @@ const metadata = {
         description:
           'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
       },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
       alt: 'Astronauts Image',
     }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Control your home via a mobile app
+      </h3>
+      Forget about all the remotes and different mobile apps, and control your home via a single unified mobile app.
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    id="devices"
+    title="Most used gadgets"
+    subtitle="Some of the most popular smart home devices"
+    tagline="Devices"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
+        title: 'Remote control',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+          'Operate your whole home via a mobile app. Turn on the lights, adjust the thermostat, and even check the security cameras – all from the palm of your hand.',
+        icon: 'flat-color-icons:iphone',
       },
       {
-        title: 'Features',
+        title: 'Lights',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
+          "Have lights automatically turn on and off based on time, motion, or even your mood. It's like magic, but real!",
+        icon: 'flat-color-icons:idea',
       },
       {
-        title: 'Content',
+        title: 'Cameras',
         description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
+          "Keep an eye on your home, even when you're not there. With smart cameras, you can see what's happening in real-time and even get alerts when something's up.",
+        icon: 'flat-color-icons:webcam',
       },
       {
-        title: 'Call-to-Action',
+        title: 'Climate control',
         description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
+          'Set the perfect temperature for your home, no matter the season. With smart ACs and automations, you can save energy and stay comfortable all year round.',
+        icon: 'fluent-emoji-flat:snowflake',
       },
       {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
+        title: 'Vacuum cleaners',
         description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
+          "Clean your home without lifting a finger. Smart vacuums can navigate your home, avoid obstacles, and even empty themselves. It's like having a personal cleaning assistant! This can be done via voice, app, or a schedule automation.",
+        icon: 'solar:smart-vacuum-cleaner-2-bold-duotone',
       },
       {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'Pet feeders and fountains',
+        description:
+          "Make sure your pet is fed and hydrated, even when you're not home. With smart feeders and fountains, you can keep your furry friend happy and healthy.",
+        icon: 'fluent-emoji-flat:fountain',
+      },
+      {
+        title: 'TVs',
+        description:
+          'Some TVs are smart. Thus, they can be operated via voice commands, mobile apps, and be part of fancy automations.',
+        icon: 'icon-park:tv-one',
+      },
+      {
+        title: 'Garage doors',
+        description:
+          'Monitor your garage doors and open or close them remotely. You can also set up automations to open or close them based on your location, or time of day, or time that they\'ve been opened.',
+        icon: 'icon-park:car',
+      },
+      {
+        title: 'Smart plugs',
+        description:
+          'Smart plugs allow users to track their electricity usage, turn devices on and off remotely (via app or voice), and even set schedules for when devices should be on or off.',
+        icon: 'fluent-emoji-flat:electric-plug',
       },
     ]}
   >
@@ -314,31 +272,273 @@ const metadata = {
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <BlogLatestPosts
+  <!-- <BlogLatestPosts
     title="Find out more content in our Blog"
     information={`The blog is used to display AstroWind documentation.
                         Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
                         Astro is a very interesting technology. Thanks.
                 `}
+  /> -->
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="services"
+    title="What services do we provide?"
+    tagline="Services"
+    subtitle="We offer a wide range of website templates that suit various industries and purposes such as business, portfolio, e-commerce, blog, etc."
+    items={[
+      {
+        title: 'Installation Instructions',
+        description:
+          'Offer clear instructions on how to download the purchased templates and install them on various website platforms or content management systems.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Demo and Previews',
+        description:
+          'Provide interactive demos and previews that allow customers to see how their chosen template will look and function before making a purchase.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Technical Support',
+        description:
+          'Providing customer support for any technical issues related to the templates or their implementation.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <Brands
+    id="brands"
+    title="Partnerships & Collaborations"
+    tagline="Brands"
+    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    icons={[]}
+    images={[
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'Paypal',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/48/visa-6850402_1280.png',
+        alt: 'Visa',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png',
+        alt: 'Ebay',
+      },
+
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
+        alt: 'Youtube',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
+        alt: 'Microsoft',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
+        alt: 'Node JS',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
+        alt: 'Google',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
+        alt: 'Meta',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png',
+        alt: 'Yahoo',
+      },
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="steps"
+    title="How working together looks like"
+    tagline="Steps"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Connect and discuss needs</span>',
+        description:
+          "We discuss via email or a call what your needs are and what you're looking for in a smart home system. We also make suggestions based on our experience.",
+        icon: 'tabler:armchair-2',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Prepare a tailored offer</span>',
+        description:
+          "After we're aware of what your needs are, we prepare an offer that would meet your requirements and expectations as much as possible.",
+        icon: 'tabler:note',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Execution</span>',
+        description: 'This is where we setup and integration devices into a single smart home system for you to use.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Done!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1608303588026-884930af2559?q=80&w=3403&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DD&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <Content
+    id="about"
+    title="Who we are"
+    tagline="About"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:world-www',
+        callToAction: {
+          target: '_blank',
+          text: 'Website',
+          href: 'https://danielgospodinow.com',
+        },
+      },
+      {
+        icon: 'tabler:brand-linkedin',
+        callToAction: {
+          target: '_blank',
+          text: 'LinkedIn',
+          href: 'https://linkedin.com/in/danielgospodinow',
+        },
+      },
+      {
+        icon: 'tabler:brand-github',
+        callToAction: {
+          target: '_blank',
+          text: 'GitHub',
+          href: 'https://github.com/danielgospodinow',
+        },
+      },
+    ]}
+    image={{
+      src: 'https://i.imgur.com/y76nEbO.jpeg',
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <p>
+        So far, Ehadom's team is composed of two people. Me - Daniel and my father - Veselin. I'm more focused on the
+        tech part while my father is responsible for the installations.
+      </p>
+      <br />
+      <p>
+        More about me - I'm a software engineer with a passion for smart home systems and automation. I have experience
+        building distributed applications in a Silicon Valley company as well as building large-scale enterprise
+        applications.
+      </p>
+      <br />
+      <p>
+        I aspire to build smart homes and the potential to transform everyday living with cutting-edge technology is
+        what drives me.
+      </p>
+      <br />
+      <p>If you're curious to dive deeper into my work, you can check my:</p>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    id="testimonials"
+    title="What our users say?"
+    tagline="Testimonials"
+    testimonials={[
+      {
+        testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
+        name: 'Hakan Halil',
+        job: 'Software Engineer @ Broadcom',
+        image: {
+          src: '~/assets/images/testi2.jpg',
+          alt: 'Hakan Halil Image',
+        },
+      },
+      {
+        testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
+        name: 'Georgi Angelov',
+        job: 'Business owner @ Metacar.bg',
+        image: {
+          src: '~/assets/images/testi5.jpg',
+          alt: 'Josh Wilkinson Image',
+        },
+      },
+      {
+        testimonial:
+          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
+        name: 'Alexander Tonev',
+        job: 'Software Developer @ Bosch',
+        image: {
+          src: '~/assets/images/testi4.jpg',
+          alt: 'Sidney Hansen Image',
+        },
+      },
+      {
+        testimonial:
+          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
+        name: 'Miroslav Grozdanov',
+        job: 'Software Technical Support Lead @ Shelly',
+        image: {
+          src: '~/assets/images/testi1.jpg',
+          alt: 'Miroslav Grozdanov Image',
+        },
+      },
+      {
+        testimonial:
+          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
+        name: 'Kristian Ivanov',
+        job: 'Personal Security @ G4S',
+        image: {
+          src: '~/assets/images/testi3.jpg',
+          alt: 'Kristian Ivanov Image',
+        },
+      },
+      {
+        testimonial:
+          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
+        name: 'Milen Georgiev',
+        job: 'Software Developer @ Progress',
+        image: {
+          src: '~/assets/images/testi6.jpg',
+          alt: 'Sidney Hansen Image',
+        },
+      },
+    ]}
   />
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
+    id="faqs"
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    subtitle="Here are some common questions that you might have about our services."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
+        title: 'What details exactly do I need to provide to receive a smart home project offer?',
         description:
           'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'But what happens if something stops working at home?',
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
       },
       {
         title: 'How to install the Astro + Tailwind CSS template?',
@@ -363,37 +563,29 @@ const metadata = {
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
+  <!-- Steps2 Widget ****************** -->
 
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
+  <Steps2
+    id="contact"
+    title="Reach out"
+    tagline="Contact"
+    subtitle="Have questions? Feel free to contact us. We're here to help!"
+    items={[
       {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        title: 'Discord',
+        description: "DM danielgospodinow or join Qbaware's server (discord.gg/4sRmgb9Vph)",
+        icon: 'tabler:brand-discord',
+      },
+      {
+        title: 'Email',
+        description: 'danielgospodinow@yahoo.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Call / Viber / WhatsApp',
+        description: '+359 899 859 592',
+        icon: 'tabler:phone',
       },
     ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+  />
 </Layout>
