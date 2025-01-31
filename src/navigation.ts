@@ -21,7 +21,6 @@ export const headerData = {
     },
     {
       text: 'Offerings',
-      href: getPermalink('/offering'),
       links: [
         {
           text: 'Devices',
@@ -31,10 +30,10 @@ export const headerData = {
           text: 'Services',
           href: getPermalink('/offering#services'),
         },
-        {
-          text: 'Brands',
-          href: getPermalink('/offering#brands'),
-        },
+        // {
+        //   text: 'Brands',
+        //   href: getPermalink('/offering#brands'),
+        // },
         {
           text: 'Steps',
           href: getPermalink('/offering#steps'),
