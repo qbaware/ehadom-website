@@ -21,15 +21,14 @@ export const headerData = {
     },
     {
       text: 'Offerings',
-      href: getPermalink('/offering'),
       links: [
         {
           text: 'Devices',
-          href: getPermalink('/offering#devices'),
+          href: getPermalink('/offering/#devices'),
         },
         {
           text: 'Services',
-          href: getPermalink('/offering#services'),
+          href: getPermalink('/offering/#services'),
         },
         // {
         //   text: 'Brands',
@@ -37,21 +36,20 @@ export const headerData = {
         // },
         {
           text: 'Steps',
-          href: getPermalink('/offering#steps'),
+          href: getPermalink('/offering/#steps'),
         },
       ],
     },
     {
       text: 'About us',
-      href: getPermalink('/about#testimonials'),
       links: [
         {
-          text: 'About us',
-          href: getPermalink('/about#about'),
+          text: 'The team',
+          href: getPermalink('/about/#team'),
         },
         {
           text: 'Testimonials',
-          href: getPermalink('/about#testimonials'),
+          href: getPermalink('/about/#testimonials'),
         },
       ],
     },
