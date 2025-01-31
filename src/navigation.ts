@@ -1,5 +1,14 @@
 import { getPermalink } from './utils/permalinks';
 
+function navigateTo(href: string) {
+  const url = new URL(href, window.location.origin);
+  if (url.hash) {
+    window.location.href = href;
+  } else {
+    window.history.pushState({}, '', href);
+  }
+}
+
 export const headerData = {
   links: [
     {
@@ -7,37 +16,45 @@ export const headerData = {
       links: [
         {
           text: 'Benefits',
-          href: getPermalink('/#benefits'),
+          href: '#',
+          onClick: () => navigateTo(getPermalink('/#benefits')),
         },
         {
           text: 'Use cases',
-          href: getPermalink('/#usecases'),
+          href: '#',
+          onClick: () => navigateTo(getPermalink('/#usecases')),
         },
         {
           text: 'Statistics',
-          href: getPermalink('/#statistics'),
+          href: '#',
+          onClick: () => navigateTo(getPermalink('/#statistics')),
         },
       ],
     },
     {
       text: 'Offerings',
-      href: getPermalink('/offering'),
+      href: '#',
+      onClick: () => navigateTo(getPermalink('/offering')),
       links: [
         {
           text: 'Devices',
-          href: getPermalink('/offering#devices'),
+          href: '#',
+          onClick: () => navigateTo(getPermalink('/offering#devices')),
         },
         {
           text: 'Services',
-          href: getPermalink('/offering#services'),
+          href: '#',
+          onClick: () => navigateTo(getPermalink('/offering#services')),
         },
         {
           text: 'Brands',
-          href: getPermalink('/offering#brands'),
+          href: '#',
+          onClick: () => navigateTo(getPermalink('/offering#brands')),
         },
         {
           text: 'Steps',
-          href: getPermalink('/offering#steps'),
+          href: '#',
+          onClick: () => navigateTo(getPermalink('/offering#steps')),
         },
       ],
     },
@@ -46,21 +63,25 @@ export const headerData = {
       links: [
         {
           text: 'About us',
-          href: getPermalink('/company#about'),
+          href: '#',
+          onClick: () => navigateTo(getPermalink('/company#about')),
         },
         {
           text: 'Testimonials',
-          href: getPermalink('/company#testimonials'),
+          href: '#',
+          onClick: () => navigateTo(getPermalink('/company#testimonials')),
         },
       ],
     },
     {
       text: 'FAQs',
-      href: getPermalink('/faq'),
+      href: '#',
+      onClick: () => navigateTo(getPermalink('/faq')),
     },
     {
       text: 'Contacts',
-      href: getPermalink('/contact'),
+      href: '#',
+      onClick: () => navigateTo(getPermalink('/contact')),
     },
   ],
   actions: [{ text: 'Contact us', href: getPermalink('/contact') }],
