@@ -43,8 +43,8 @@ export const headerData = {
       // ],
     },
     {
-      text: 'Company',
-      href: getPermalink('/company'),
+      text: 'About us',
+      href: getPermalink('/about'),
       // links: [
       //   {
       //     text: 'About us',
