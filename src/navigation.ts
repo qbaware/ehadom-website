@@ -123,5 +123,5 @@ export const footerData = {
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
   ],
-  footNote: "Ehadom · All rights reserved.",
+  footNote: 'Ehadom · All rights reserved.',
 };

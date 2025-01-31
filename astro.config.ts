@@ -35,18 +35,10 @@ export default defineConfig({
     mdx(),
     icon({
       include: {
-        "tabler": ['*'],
-        "solar": ["smart-vacuum-cleaner-2-bold-duotone"],
-        "fluent-emoji-flat": [
-          "automobile",
-          "snowflake",           
-          "fountain",
-          "electric-plug"
-        ],
-        "icon-park": [
-          "tv-one", 
-          "car"
-        ],
+        tabler: ['*'],
+        solar: ['smart-vacuum-cleaner-2-bold-duotone'],
+        'fluent-emoji-flat': ['automobile', 'snowflake', 'fountain', 'electric-plug'],
+        'icon-park': ['tv-one', 'car'],
         'flat-color-icons': [
           'customer-support',
           'support',
