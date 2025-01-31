@@ -1,7 +1,7 @@
 site:
   name: Ehadom
-  site: 'https://ehadom.com'
-  base: '/'
+  site: 'http://qbaware.github.io/ehadom.github.io/'
+  base: '/ehadom.github.io/'
   trailingSlash: false
 
   googleSiteVerificationId: TBD

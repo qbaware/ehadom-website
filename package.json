@@ -2,6 +2,7 @@
   "name": "@onwidget/astrowind",
   "version": "1.0.0-beta.50",
   "description": "AstroWind: A free template using Astro 5.0 and Tailwind CSS. Astro starter theme.",
+  "homepage": "http://qbaware.github.io/ehadom.github.io/",
   "type": "module",
   "private": true,
   "engines": {
@@ -11,6 +12,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "deploy": "gh-pages -d dist",
     "preview": "astro preview",
     "astro": "astro",
     "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
