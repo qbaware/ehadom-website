@@ -4,57 +4,56 @@ export const headerData = {
   links: [
     {
       text: 'Overview',
-      href: getPermalink('/'),
-      // links: [
-      //   {
-      //     text: 'Benefits',
-      //     href: getPermalink('/#benefits'),
-      //   },
-      //   {
-      //     text: 'Use cases',
-      //     href: getPermalink('/#usecases'),
-      //   },
-      //   {
-      //     text: 'Statistics',
-      //     href: getPermalink('/#statistics'),
-      //   },
-      // ],
+      links: [
+        {
+          text: 'Benefits',
+          href: getPermalink('/#benefits'),
+        },
+        {
+          text: 'Use cases',
+          href: getPermalink('/#usecases'),
+        },
+        {
+          text: 'Statistics',
+          href: getPermalink('/#statistics'),
+        },
+      ],
     },
     {
       text: 'Offerings',
       href: getPermalink('/offering'),
-      // links: [
-      //   {
-      //     text: 'Devices',
-      //     href: getPermalink('/offering#devices'),
-      //   },
-      //   {
-      //     text: 'Services',
-      //     href: getPermalink('/offering#services'),
-      //   },
-      //   // {
-      //   //   text: 'Brands',
-      //   //   href: getPermalink('/offering#brands'),
-      //   // },
-      //   {
-      //     text: 'Steps',
-      //     href: getPermalink('/offering#steps'),
-      //   },
-      // ],
+      links: [
+        {
+          text: 'Devices',
+          href: getPermalink('/offering#devices'),
+        },
+        {
+          text: 'Services',
+          href: getPermalink('/offering#services'),
+        },
+        // {
+        //   text: 'Brands',
+        //   href: getPermalink('/offering#brands'),
+        // },
+        {
+          text: 'Steps',
+          href: getPermalink('/offering#steps'),
+        },
+      ],
     },
     {
       text: 'About us',
-      href: getPermalink('/about'),
-      // links: [
-      //   {
-      //     text: 'About us',
-      //     href: getPermalink('/company#about'),
-      //   },
-      //   {
-      //     text: 'Testimonials',
-      //     href: getPermalink('/company#testimonials'),
-      //   },
-      // ],
+      href: getPermalink('/about#testimonials'),
+      links: [
+        {
+          text: 'About us',
+          href: getPermalink('/about#about'),
+        },
+        {
+          text: 'Testimonials',
+          href: getPermalink('/about#testimonials'),
+        },
+      ],
     },
     {
       text: 'FAQs',
