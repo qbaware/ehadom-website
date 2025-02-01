@@ -4,58 +4,58 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Pricing',
+  title: 'Въпроси',
 };
 ---
 
 <Layout metadata={metadata}>
   <FAQs
     id="faqs"
-    title="Frequently Asked Questions"
-    subtitle="Here are some common questions that you might have about our services."
-    tagline="FAQs"
+    title="Често задавани въпроси"
+    subtitle="Ето някои често задавани въпроси, които може да имате относно нашите услуги."
+    tagline="ЧЗВ"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'What details exactly do I need to provide to receive a smart home project offer?',
+        title: 'Какви детайли точно трябва да предоставя, за да получа оферта за проект за умен дом?',
         description:
-          'We need to know the size of your home, the number of rooms, the number of floors, the number of people living in the home, the devices you already have, the devices you want to have, and the budget you have in mind - just to name a few.',
+          'Трябва да знаем размера на вашия дом, броя на стаите, броя на етажите, броя на хората, които живеят в дома, устройствата, които вече имате, устройствата, които искате да имате, и бюджета, който имате предвид - това са само част от нещата.',
       },
       {
-        title: 'But what happens if something stops working at home?',
+        title: 'Но какво се случва, ако нещо спре да работи у дома?',
         description:
-          "Given that you are eligible to receive support from us, we'll do our best to help you resolve the issue in a timely manner (usually 3-4 business days). If it's a hardware issue, we can replace the device. If it's a software issue, we'll help you resolve it.",
+          'Ако имате право на поддръжка от нас, ще направим всичко възможно да ви помогнем да разрешите проблема в кратък срок (обикновено 3-4 работни дни). Ако е хардуерен проблем, можем да заменим устройството. Ако е софтуерен проблем, ще ви помогнем да го разрешите.',
       },
       {
-        title: 'Can we have additional devices in the smart home system in the future?',
+        title: 'Можем ли да добавим допълнителни устройства в системата за умен дом в бъдеще?',
         description:
-          "Yes. It's totally possible to add more devices to your smart home system. However, it's recommended to consult with us before adding a new device to ensure that it's compatible with your existing system. Also, we'll help out with the installation.",
+          'Да. Напълно възможно е да добавим още устройства към вашата система за умен дом. Въпреки това, препоръчваме да се консултирате с нас преди да си харесате ново устройство, за да се уверите, че е съвместимо с вашата съществуваща система. Също така, ще помогнем с инсталацията.',
       },
       {
-        title: 'What kind of smart home systems do you install actually?',
+        title: 'Какви видове системи за умен дом инсталирате всъщност?',
         description:
-          'We install Home Assistant systems. And we have a couple of hardware options that we choose based on customer needs, but to name some - Raspberry Pi 4/5, Home Assistant Green, mini PC, or some other custom-built server.',
+          'Инсталираме Home Assistant системи. Имаме няколко хардуерни опции, които избираме въз основа на нуждите на клиента, но за да назовем някои - Raspberry Pi 4/5, Home Assistant Green, мини компютър или някакъв друг персонализиран сървър.',
       },
       {
-        title: 'What kind of voice assistants do you support/offer?',
+        title: 'Какви видове гласови асистенти поддържате/предлагате?',
         description:
-          "We offer only two choices as of now - an integration with Amazon Alexa (for a cloud-based voice assistant) or an integration with Rhasspy (for a local voice assistant). We're planning to add more in the future.",
+          'Предлагаме само два избора към момента - интеграция с Amazon Alexa (за облачен гласов асистент) или интеграция с Rhasspy (за локален гласов асистент). Планираме да добавим още в бъдеще.',
       },
       {
-        title: 'Is the system local or cloud-based?',
+        title: 'Смарт системата ви локална ли е или базирана на облак?',
         description:
-          "Based on the specific needs of the customer, we can offer both. However, we always recommend a local system as it's more secure and reliable. But if you need to control your home while you're not at home, a cloud-based system is the way to go.",
+          'Въз основа на специфичните нужди на клиента, можем да предложим и двете. Въпреки това, винаги препоръчваме локална система, тъй като е по-сигурна и надеждна. Но ако трябва да контролирате дома си, докато не сте вкъщи, облачната система е правилният избор.',
       },
     ]}
   />
 
   <CallToAction
-    title="What's next?"
-    subtitle="Didn't find what you were looking for? Feel free to reach out to us directly. We'll be glad to help!"
+    title="Какво следва?"
+    subtitle="Не намерихте това, което търсите? Свържете се директно с нас. Ще се радваме да помогнем!"
     actions={[
       {
         variant: 'primary',
-        text: 'Contact us',
+        text: 'Свържете се с нас',
         href: '/contact',
       },
     ]}
