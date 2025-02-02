@@ -33,7 +33,7 @@ export const headerData = {
         {
           text: 'Услуги',
           href: getPermalink('/offering/#services'),
-      },
+        },
         {
           text: 'Процедура',
           href: getPermalink('/offering/#steps'),
