@@ -27,13 +27,13 @@ export const headerData = {
           href: getPermalink('/offering/#devices'),
         },
         {
+          text: 'Производители',
+          href: getPermalink('/offering/#brands'),
+        },
+        {
           text: 'Услуги',
           href: getPermalink('/offering/#services'),
-        },
-        // {
-        //   text: 'Brands',
-        //   href: getPermalink('/offering#brands'),
-        // },
+      },
         {
           text: 'Процедура',
           href: getPermalink('/offering/#steps'),
